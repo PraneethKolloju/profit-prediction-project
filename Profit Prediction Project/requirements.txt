@@ -1,5 +1,6 @@
 numpy
 pandas
+pickle
 scikit-learn
 joblib
 Click==7.0
