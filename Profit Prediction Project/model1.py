@@ -4,7 +4,6 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 import pickle
-import joblib
 dataset = pd.read_csv('50_Startups.csv')
 dataset.drop(['State'],axis=1,inplace=True)
 X = dataset.iloc[:, :-1].values
