@@ -1,0 +1,61 @@
+<html>
+<head>
+<style>	
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@1400;1500;1900;1900&display=swap');
+body{
+	font size="70";
+	font-family:'Roboto', sans-serif;
+	font-size:40px;
+	line-height:1.4;
+	min-width:10px;
+	min-height:50px;
+    }
+.button {
+  background-color: black; /* Green */
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button4 {border-radius: 8px;
+	font-size: 12px;}
+body {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style> 
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="static/index.css">
+<link href='https://fonts.googleapis.com/css?family=Roboto:400' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">       
+</head>
+<body background="https://images.unsplash.com/photo-1538356596070-887d2c0b0d63?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=873&q=80">
+	<div class="login">
+	  <form action="{{ url_for('predict')}}"method="post">
+		<center>
+			<h1>Predict Profit</h1>
+		   
+			<input type="text" name="R&D Spend" placeholder="R&D_Spend in Dollars" required="required" />
+			<input type="text" name="Administration" placeholder="Administration in Dollars" required="required" />
+			<input type="text" name="Marketing Spend" placeholder="Marketing Spend in Dollars" required="required" />
+		
+			<button class="button button4">Predict</button>
+		  </center> 
+	  </form> 
+	</div>
+	<center>
+	  <span class="tt"><h1>{{ prediction_text }}</h1></span>
+	  <a class="sfollow" href="https://www.linkedin.com/in/polina-lakshmi-arshitha-63a30222b/"  target="_blank" align="center"><span>Contact Me</span></a>
+	  <h2>Arshitha Polina &copy; 2021</h2>
+	</center>
+	</body>
+</html>
